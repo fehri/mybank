@@ -1,0 +1,38 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.fehri.bank</groupId>
+    <version>1.0</version>
+    <artifactId>mybank-aggregator</artifactId>
+    <packaging>pom</packaging>
+    <name>MyBank</name>
+    <modules>
+        <module>servlets</module>
+        <module>ejbs</module>
+        <module>ear</module>
+    </modules>
+    <build>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.fehri.bank</groupId>
+                <artifactId>mybank-servlets</artifactId>
+                <version>1.0</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>de.fehri.bank</groupId>
+                <artifactId>mybank-ejbs</artifactId>
+                <version>1.0</version>
+                <type>ejb</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <distributionManagement>
+        <site>
+            <id>site</id>
+            <name>project website</name>
+            <url>scp://local.company.com/websites/project.company.com/</url>
+        </site>
+    </distributionManagement>
+</project>

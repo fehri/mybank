@@ -1,0 +1,38 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.fehri.bank</groupId>
+    <artifactId>mybank-ear</artifactId>
+    <packaging>ear</packaging>
+    <version>1.0</version>
+    <name>ear assembly</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.fehri.bank</groupId>
+            <artifactId>mybank-ejbs</artifactId>
+            <version>1.0</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>de.fehri.bank</groupId>
+            <artifactId>mybank-servlets</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
