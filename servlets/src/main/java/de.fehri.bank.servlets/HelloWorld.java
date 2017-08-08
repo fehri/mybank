@@ -1,5 +1,8 @@
 package de.fehri.bank.servlets;
 
+import de.fehri.bank.ejbs.MyFirstEJB;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,9 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = {"/blubber"})
 public class HelloWorld extends HttpServlet {
 
+    @EJB
+    MyFirstEJB myFirstEJB;
+
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -19,7 +25,7 @@ public class HelloWorld extends HttpServlet {
 
         // Actual logic goes here.
         PrintWriter out = response.getWriter();
-        out.println("<h1>" + "blub" + "</h1>");
+        out.println("<h1>" + "blub" + myFirstEJB.myLuckyNumber() + "</h1>");
     }
 
 
