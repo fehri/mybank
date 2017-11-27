@@ -1,4 +1,12 @@
 <project>
+
+    <parent>
+        <groupId>de.fehri.bank</groupId>
+        <artifactId>mybank-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../parent</relativePath>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.fehri.bank</groupId>
     <artifactId>mybank-ear</artifactId>
@@ -10,14 +18,14 @@
         <dependency>
             <groupId>de.fehri.bank</groupId>
             <artifactId>mybank-ejbs</artifactId>
-            <version>1.0</version>
             <type>ejb</type>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>de.fehri.bank</groupId>
             <artifactId>mybank-servlets</artifactId>
-            <version>1.0</version>
             <type>war</type>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
@@ -35,4 +43,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

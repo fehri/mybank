@@ -1,0 +1,34 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.fehri.bank</groupId>
+    <artifactId>mybank-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>MyBank-Parent</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.fehri.bank</groupId>
+                <artifactId>mybank-ejbs</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>de.fehri.bank</groupId>
+                <artifactId>mybank-servlets</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>de.fehri.bank</groupId>
+                <artifactId>mybank-ear</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>7.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -4,30 +4,15 @@
     <version>1.0</version>
     <artifactId>mybank-aggregator</artifactId>
     <packaging>pom</packaging>
-    <name>MyBank</name>
+    <name>MyBank-Aggregator</name>
+
     <modules>
+        <module>parent</module>
         <module>servlets</module>
         <module>ejbs</module>
         <module>ear</module>
     </modules>
-    <build>
-    </build>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>de.fehri.bank</groupId>
-                <artifactId>mybank-servlets</artifactId>
-                <version>1.0</version>
-                <type>war</type>
-            </dependency>
-            <dependency>
-                <groupId>de.fehri.bank</groupId>
-                <artifactId>mybank-ejbs</artifactId>
-                <version>1.0</version>
-                <type>ejb</type>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
     <distributionManagement>
         <site>
             <id>site</id>

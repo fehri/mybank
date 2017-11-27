@@ -1,4 +1,12 @@
 <project>
+
+    <parent>
+        <groupId>de.fehri.bank</groupId>
+        <artifactId>mybank-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../parent</relativePath>
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.fehri.bank</groupId>
     <artifactId>mybank-servlets</artifactId>
@@ -10,13 +18,11 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.fehri.bank</groupId>
             <artifactId>mybank-ejbs</artifactId>
-            <version>1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
